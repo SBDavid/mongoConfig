@@ -29,3 +29,9 @@
 - 启动win service: net start mongodInstance1
 
 - 停止win service: net stop mongodInstance1
+
+- dump: mongodump.exe -h 127.0.0.1:27017 -d gitcms -o dump
+
+- restore: mongorestore.exe -h 127.0.0.1:27017 -d gitcms2  ./dump/gitcms/
+
+- mongoexport: mongoexport.exe -h 127.0.0.1:27017 -d gitcms -c projects -o ./export/projects.json
